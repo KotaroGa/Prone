@@ -26,3 +26,6 @@ PRICE_ALERTS = {
 
 # API settings
 COINGECKO_API_URL = "https://api.coingecko.com/api/v3/simple/price"
+
+# Interval between checks (seconds)
+CHECK_INTERVAL = 60
