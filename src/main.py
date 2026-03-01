@@ -1,19 +1,37 @@
+
+"""
+Prone - Crypto Monitoring Bot
+Entry point
+"""
+
+import time
 from notifier import TelegramNotifier
-from price_checker import fetch_prices
+from price_fetcher import fetch_prices
+from alert_logic import check_alerts
+from config import CHECK_INTERVAL
+
 
 def main():
     notifier = TelegramNotifier()
-    prices = fetch_prices()
+    previous_states = {}
 
-    if prices:
-        print("[INFO] Prices fetched successfully: ")
-        for symbol, price in prices.items():
-            print(f"{symbol}: ${price}")
-        # Example: send a test message
-        notifier.send_message(f"Current prices: {prices}")
-    else:
-        print("[WARN] No prices fetched.")
+    print("[SYSTEM] Prone monitoring started.")
+
+    while True:
+        prices = fetch_prices()
+
+        if prices:
+            alerts, previous_states = check_alerts(
+                prices,
+                previous_states
+            )
+
+            for alert in alerts:
+                print(f"[ALERT] {alert}")
+                notifier.send_message(alert)
+
+        time.sleep(CHECK_INTERVAL)
 
 
-if __name__=="__main__":
+if __name__ == "__main__":
     main()
