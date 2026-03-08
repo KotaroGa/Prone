@@ -1,8 +1,29 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> develop
 ## Prone
 - >_ LOG INITIATED: SIGNAL SYSTEM BOOT
 - >_ ALL CHANGES ARE RECORDED HERE
 
 ---
+<<<<<<< HEAD
+=======
+### [0.2.0] - 08.03.2026
+
+#### Added
+- Crypto price fetching via CoinGecko API
+- Configurable cryptocurrency list
+- Threshold-based alert system
+- Stateful alert logic to prevent spam
+- Continuous monitoring loop
+
+#### Refactored
+- Modular architecture (price_fetcher, alert_logic separation)
+
+---
+
+>>>>>>> develop
 ### [v0.1.0] - 15-02-2026
 
 #### ADDED
@@ -30,5 +51,9 @@
 + >_STSTEM: TELEGRAM SIGNAL DISPATCH OPERATIONAL
 + >_STATUS: NOTIFIER STABLE
 + >_NEXT: CRYPTO PRICE FETCHER MODULE
+<<<<<<< HEAD
 + >_MODE: TERMINAL-FRIST DEVELOPMENT
 
+=======
++ >_MODE: TERMINAL-FRIST DEVELOPMENT
+>>>>>>> develop

@@ -1,6 +1,7 @@
+
 ### :crown:PRONE - Crypto Alert System
 
-> **SIGNAL EDITION** | `>_TELEGRAM NOTIFIER OPERATIONAL`
+> **SIGNAL EDITION** | `>_CRYPTO MONITOR ONLINE`
 
 ![Status](https://img.shields.io/badge/STATUS-TELEGRAM_OPERATIONAL-green)
 ![Python](https://img.shields.io/badge/PYTHON-3.13-blue)
@@ -8,7 +9,7 @@
 ![Version](https://img.shields.io/badge/VERSION-0.1.0-red)
 ![Mode](https://img.shields.io/badge/MODE-HEADLESS_TERMINAL-00FF41)
 
-- SYSTEM: Prone v0.1.0 online
+- SYSTEM: Prone v0.2.0 online
 - MISSION: Monitor Crypto Signals
 - PROTOCOL: HTTP API -> Telegram Dispatch
 - ARCHITECTURE: Modular | GitFlow | Terminal-Driven
@@ -22,7 +23,7 @@ git clone https://github.com/KotaroGa/Prone.git
 cd prone
 
 # Checkout stable release
-git checkout v0.1.0
+git checkout v0.2.0
 
 # Create virtual enviroment
 python -m venv .venv
@@ -44,12 +45,17 @@ python src/main.py
 
 ---
 #### :satelite:CURRENT CAPABILITIES
-* Telegram Bot integration
+* Real-time cryptocurrency price monitoring
+* CoinGecko API price retrieval
+* Configurable cryptocurrency list
+* Threshold-based alert system
+* Stateful alert logic (anti-spam notifications)
+* Telegram Bot alert dispatch
 * Enviroment-based configuration
 * Secure token handling(.env ignored)
 * Modular notifier class
 * GitFlow structured workflow
-* Version tagging(v0.1.0)
+* Version tagging(v0.2.0)
 
 
 ---
@@ -57,19 +63,20 @@ python src/main.py
 - >_LANGUAGE: Python3.13
 - >_HTTP: requests
 - >_ENV: python-dotenv
+- >_DATA: CoinGecko API
 - >_NOTIFICATIONS: Telegram Bot API
 - >_WORKFLOW: GitFlow
 - >_PLATFORM: Terminal-first development
 
 
-> [!WARNING]
->##### Not financial advice
+  > [!WARNING]
+  >###### Not financial advice
 
 ---
 > [!TIP]
 >##### If you like my work and want to support it, you can do so with cryptocurrencies.
 >##### Your contributions help maintain projects and continue creating free content
 
-> [:red_circle:] (BTC): `bc1qlhup35a64qq0e6uc2v07s64tzjrmj8j9e24jmr`
-> [:red_circle:] (ETH): `0x6D4DB084eaC2cF9D4BbF04FdCBd3e737FDD36dcc`
-> [:red_circle:] (SOL): `51ueAbc6TC52UExxTKRoYSKuiWnLSci2`
+- 🔴 (BTC): `bc1qlhup35a64qq0e6uc2v07s64tzjrmj8j9e24jmr`
+- 🔴 (ETH): `0x6D4DB084eaC2cF9D4BbF04FdCBd3e737FDD36dcc`
+- 🔴 (SOL): `51ueAbc6TC52UExxTKRoYSKuiWnLSci2`
