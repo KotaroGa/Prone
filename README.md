@@ -6,7 +6,7 @@
 ![Status](https://img.shields.io/badge/STATUS-TELEGRAM_OPERATIONAL-green)
 ![Python](https://img.shields.io/badge/PYTHON-3.13-blue)
 ![Platform](https://img.shields.io/badge/PLATFORM-Linux%20|%20macOS-black)
-![Version](https://img.shields.io/badge/VERSION-0.1.0-red)
+![Version](https://img.shields.io/badge/VERSION-0.3.0-red)
 ![Mode](https://img.shields.io/badge/MODE-HEADLESS_TERMINAL-00FF41)
 
 - SYSTEM: Prone v0.3.0 online
@@ -69,6 +69,7 @@ python src/main.py
 - >_PLATFORM: Terminal-first development
 - >_LOGGING: Python logging module
 
+---
 
 > [!WARNING]
 >###### Not financial advice
