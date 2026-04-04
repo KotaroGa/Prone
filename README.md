@@ -9,7 +9,7 @@
 ![Version](https://img.shields.io/badge/VERSION-0.1.0-red)
 ![Mode](https://img.shields.io/badge/MODE-HEADLESS_TERMINAL-00FF41)
 
-- SYSTEM: Prone v0.2.0 online
+- SYSTEM: Prone v0.3.0 online
 - MISSION: Monitor Crypto Signals
 - PROTOCOL: HTTP API -> Telegram Dispatch
 - ARCHITECTURE: Modular | GitFlow | Terminal-Driven
@@ -23,7 +23,7 @@ git clone https://github.com/KotaroGa/Prone.git
 cd prone
 
 # Checkout stable release
-git checkout v0.2.0
+git checkout v0.3.0
 
 # Create virtual enviroment
 python -m venv .venv
@@ -44,7 +44,7 @@ python src/main.py
 ```
 
 ---
-#### :satelite:CURRENT CAPABILITIES
+#### :satellite:CURRENT CAPABILITIES
 * Real-time cryptocurrency price monitoring
 * CoinGecko API price retrieval
 * Configurable cryptocurrency list
@@ -55,7 +55,7 @@ python src/main.py
 * Secure token handling(.env ignored)
 * Modular notifier class
 * GitFlow structured workflow
-* Version tagging(v0.2.0)
+* Version tagging(v0.3.0)
 
 
 ---
@@ -67,10 +67,11 @@ python src/main.py
 - >_NOTIFICATIONS: Telegram Bot API
 - >_WORKFLOW: GitFlow
 - >_PLATFORM: Terminal-first development
+- >_LOGGING: Python logging module
 
 
-  > [!WARNING]
-  >###### Not financial advice
+> [!WARNING]
+>###### Not financial advice
 
 ---
 > [!TIP]

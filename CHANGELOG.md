@@ -2,8 +2,19 @@
 ## Prone
 - >_ LOG INITIATED: SIGNAL SYSTEM BOOT
 - >_ ALL CHANGES ARE RECORDED HERE
+---
+### [0.3.0] - 04.04.2026
+
+#### Added
+- Logging system with INFO and ERROR levels
+- Centralized logger module
+
+#### Refactored
+- Replaced print statements with logging
+- Integrated logging across notifier and fetch modules
 
 ---
+
 ### [0.2.0] - 08.03.2026
 
 #### Added
