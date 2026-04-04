@@ -4,6 +4,7 @@ Handles crypto price retrieval from external API
 """
 
 import requests
+import logger, logging
 from config import CRYPTOCURRENCIES, COINGECKO_API_URL
 
 
@@ -18,6 +19,7 @@ def fetch_prices() -> dict:
         "ids": ids,
         "vs_currencies": "usd"
     }
+    logger = logging.getLogger("prone")
 
     try:
         response = requests.get(
@@ -35,5 +37,5 @@ def fetch_prices() -> dict:
         }
 
     except requests.RequestException as error:
-        print(f"[ERROR] Price fetch failed: {error}")
+        logger.error(f"Price fetch failed: {error}")
         return {}
