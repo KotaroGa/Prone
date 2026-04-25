@@ -3,6 +3,17 @@
 - >_ LOG INITIATED: SIGNAL SYSTEM BOOT
 - >_ ALL CHANGES ARE RECORDED HERE
 ---
+### [0.4.0] - 25.04.2026
+
+#### Added
+- Dockerfile for containerized execution
+- .dockerignore for optimized builds
+
+#### Improved
+- Real-time logging in container (PYTHONUNBUFFERED)
+
+---
+
 ### [0.3.0] - 04.04.2026
 
 #### Added
