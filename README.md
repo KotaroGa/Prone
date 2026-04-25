@@ -6,10 +6,10 @@
 ![Status](https://img.shields.io/badge/STATUS-TELEGRAM_OPERATIONAL-green)
 ![Python](https://img.shields.io/badge/PYTHON-3.13-blue)
 ![Platform](https://img.shields.io/badge/PLATFORM-Linux%20|%20macOS-black)
-![Version](https://img.shields.io/badge/VERSION-0.3.0-red)
+![Version](https://img.shields.io/badge/VERSION-0.4.0-red)
 ![Mode](https://img.shields.io/badge/MODE-HEADLESS_TERMINAL-00FF41)
 
-- SYSTEM: Prone v0.3.0 online
+- SYSTEM: Prone v0.4.0 online
 - MISSION: Monitor Crypto Signals
 - PROTOCOL: HTTP API -> Telegram Dispatch
 - ARCHITECTURE: Modular | GitFlow | Terminal-Driven
@@ -23,7 +23,7 @@ git clone https://github.com/KotaroGa/Prone.git
 cd prone
 
 # Checkout stable release
-git checkout v0.3.0
+git checkout v0.4.0
 
 # Create virtual enviroment
 python -m venv .venv
@@ -55,19 +55,20 @@ python src/main.py
 * Secure token handling(.env ignored)
 * Modular notifier class
 * GitFlow structured workflow
-* Version tagging(v0.3.0)
+* Version tagging
+* Real time logging in container (PYTHONUNBUFFERED)
 
 
 ---
 #### :nut_and_bolt:TECH STACK
-- >_LANGUAGE: Python3.13
-- >_HTTP: requests
-- >_ENV: python-dotenv
-- >_DATA: CoinGecko API
-- >_NOTIFICATIONS: Telegram Bot API
-- >_WORKFLOW: GitFlow
-- >_PLATFORM: Terminal-first development
-- >_LOGGING: Python logging module
+- >LANGUAGE: Python3.13
+- >HTTP: requests
+- >ENV: python-dotenv
+- >DATA: CoinGecko API
+- >NOTIFICATIONS: Telegram Bot API
+- >WORKFLOW: GitFlow
+- >PLATFORM: Terminal-first development
+- >LOGGING: Python logging module
 
 ---
 
