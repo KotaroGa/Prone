@@ -3,6 +3,17 @@
 - >_ LOG INITIATED: SIGNAL SYSTEM BOOT
 - >_ ALL CHANGES ARE RECORDED HERE
 ---
+### [0.5.0] - 01.05.2026
+
+#### Added
+- Persistent state management using JSON file
+- State loading on startup and saving after each cycle
+
+#### Improved
+- Prevent duplicate alerts after restart
+
+---
+
 ### [0.4.0] - 25.04.2026
 
 #### Added
