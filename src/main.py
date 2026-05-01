@@ -8,13 +8,14 @@ import time
 from notifier import TelegramNotifier
 from price_fetcher import fetch_prices
 from alert_logic import check_alerts
+from state_manager import load_state, save_state
 from config import CHECK_INTERVAL
 from logger import setup_logger
 
 
 def main():
     notifier = TelegramNotifier()
-    previous_states = {}
+    previous_states = load_state()
     logger = setup_logger()
 
     logger.info("Prone monitoring started")
@@ -31,6 +32,8 @@ def main():
             for alert in alerts:
                 logger.info(alert)
                 notifier.send_message(alert)
+            
+            save_state(previous_states)
 
         time.sleep(CHECK_INTERVAL)
 
