@@ -24,7 +24,8 @@ def main():
     logger.info("Prone monitoring started")
 
     while True:
-        prices = fetch_prices()
+        symbols = list(config.keys())
+        prices = fetch_prices(symbols)
 
         if prices:
             alerts, previous_states = check_alerts(

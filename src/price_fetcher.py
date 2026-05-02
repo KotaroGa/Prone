@@ -4,22 +4,34 @@ Handles crypto price retrieval from external API
 """
 
 import requests
-import logger, logging
-from config import CRYPTOCURRENCIES, COINGECKO_API_URL
+import logging
+
+logger = logging.getLogger("prone")
+
+COINGECKO_API_URL = "https://api.coingecko.com/api/v3/simple/price"
 
 
-def fetch_prices() -> dict:
+def fetch_prices(symbols: list[str]) -> dict:
     """
-    Fetches current USD prices for configured cryptocurrencies.
+    Fetches current USD prices for given cryptocurrencies.
+
+    Args:
+        symbols: list of crypto ids (e.g. ["bitcoin", "ethereum"])
+
     Returns:
         dict: {symbol: price}
     """
-    ids = ",".join(CRYPTOCURRENCIES.keys())
+
+    if not symbols:
+        logger.warning("No symbols provided for price fetch")
+        return {}
+
+    ids = ",".join(symbols)
+
     params = {
         "ids": ids,
         "vs_currencies": "usd"
     }
-    logger = logging.getLogger("prone")
 
     try:
         response = requests.get(
@@ -32,7 +44,7 @@ def fetch_prices() -> dict:
 
         return {
             symbol: data[symbol]["usd"]
-            for symbol in CRYPTOCURRENCIES.keys()
+            for symbol in symbols
             if symbol in data
         }
 
