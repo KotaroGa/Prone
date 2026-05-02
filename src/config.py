@@ -1,31 +1,47 @@
 """
-Configuration for Prone crypto monitoring
+Configuration loader for Prone
 """
 
 import os
+import logging
 
-# Telegram settings (already used in notifier)
-TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
-TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
+logger = logging.getLogger("prone")
 
-# Cryptocurrencies to track
-# Forma: SYMBOL: friendly_name
-CRYPTOCURRENCIES = {
-    "bitcoin": "Bitcoin",
-    "ethereum": "Ethereum",
-    "solana": "Solana"
-}
 
-# Price alert thresholds (optional)
-# Format: SYMBOL: {"upper": float, "lower": float}
-PRICE_ALERTS = {
-    "bitcoin": {"upper": 30000, "lower": 20000},
-    "ethereum": {"upper": 2000, "lower": 1000},
-    "solana": {"upper": 50, "lower": 20}
-}
 
-# API settings
-COINGECKO_API_URL = "https://api.coingecko.com/api/v3/simple/price"
+def load_crypto_config() -> dict:
+    """
+    Loads crypto config from env.
 
-# Interval between checks (seconds)
-CHECK_INTERVAL = 60
+    Format:
+        CRYPTO_ASSETS=bitcoin:30000:20000,ethereum:2000:1000
+    """
+    raw_config = os.getenv("CRYPTO_ASSETS")
+
+    if not raw_config:
+        raise ValueError("CRYPTO_ASSETS not defined")
+    
+    assets = {}
+
+    try:
+        pairs = raw_config.split(",")
+
+        for pair in pairs:
+            symbol, upper, lower = pair.split(":")
+
+            assets[symbol.strip()] = {
+                "upper": float(upper),
+                "lower": float(lower)
+            }
+
+        logger.info(f"Loaded {len(assets)} assets from config")
+        return assets
+    
+    except Exception as e:
+        logger.error(f"Invalid CRYPTO_ASSETS format: {e}")
+        raise
+
+
+
+def get_check_interval() -> int:
+    return int(os.getenv("CHECK_INTERVAL", 60))
