@@ -9,8 +9,11 @@ from notifier import TelegramNotifier
 from price_fetcher import fetch_prices
 from alert_logic import check_alerts
 from state_manager import load_state, save_state
-from config import CHECK_INTERVAL
+from config import load_crypto_config, get_check_interval
 from logger import setup_logger
+
+config = load_crypto_config()
+CHECK_INTERVAL = get_check_interval()
 
 
 def main():
@@ -21,11 +24,13 @@ def main():
     logger.info("Prone monitoring started")
 
     while True:
-        prices = fetch_prices()
+        symbols = list(config.keys())
+        prices = fetch_prices(symbols)
 
         if prices:
             alerts, previous_states = check_alerts(
                 prices,
+                config,
                 previous_states
             )
 

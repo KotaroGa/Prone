@@ -6,10 +6,10 @@
 ![Status](https://img.shields.io/badge/STATUS-TELEGRAM_OPERATIONAL-green)
 ![Python](https://img.shields.io/badge/PYTHON-3.13-blue)
 ![Platform](https://img.shields.io/badge/PLATFORM-Linux%20|%20macOS-black)
-![Version](https://img.shields.io/badge/VERSION-0.5.0-red)
+![Version](https://img.shields.io/badge/VERSION-0.6.0-red)
 ![Mode](https://img.shields.io/badge/MODE-HEADLESS_TERMINAL-00FF41)
 
-- SYSTEM: Prone v0.5.0 online
+- SYSTEM: Prone v0.6.0 online
 - MISSION: Monitor Crypto Signals
 - PROTOCOL: HTTP API -> Telegram Dispatch
 - ARCHITECTURE: Modular | GitFlow | Terminal-Driven
@@ -23,7 +23,7 @@ git clone https://github.com/KotaroGa/Prone.git
 cd prone
 
 # Checkout stable release
-git checkout v0.5.0
+git checkout v0.6.0
 
 # Create virtual enviroment
 python -m venv .venv
@@ -58,6 +58,7 @@ python src/main.py
 * Version tagging
 * Real time logging in container (PYTHONUNBUFFERED)
 * Persistent alert state (no duplicate alerts after restart)
+* Dynamic asset configuration via enviroment variable
 
 
 ---
@@ -71,10 +72,6 @@ python src/main.py
 - >PLATFORM: Terminal-first development
 - >LOGGING: Python logging module
 
----
-
-> [!WARNING]
->###### Not financial advice
 
 ---
 > [!TIP]

@@ -6,6 +6,21 @@
 - >_ LOG INITIATED: SIGNAL SYSTEM BOOT
 - >_ ALL CHANGES ARE RECORDED HERE
 ---
+### [0.6.0] - 03.05.2026
+
+#### Added
+- Dynamic crypto configuration via environment variables
+- Support for configurable upper/lower thresholds per asset
+
+#### Refactored
+- Removed hardcoded configuration from codebase
+- Decoupled alert logic and price fetcher from config module
+
+#### Improved
+- Fully configurable system without code changes
+
+---
+
 ### [0.5.0] - 01.05.2026
 
 #### Added
